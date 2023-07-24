@@ -86,7 +86,7 @@
                                     <action selector="textFieldKeyboardTapped:" destination="WeF-bd-G26" eventType="editingDidEndOnExit" id="Rsu-LZ-uh6"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MHS-4L-xVd">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MHS-4L-xVd">
                                 <rect key="frame" x="20" y="132" width="34" height="28"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
@@ -97,7 +97,7 @@
                                     <action selector="wordButtonTapped:" destination="WeF-bd-G26" eventType="touchUpInside" id="279-EK-rhu"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7sw-yC-d6F">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7sw-yC-d6F">
                                 <rect key="frame" x="62" y="132" width="63.666666666666686" height="28"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -107,7 +107,7 @@
                                     <action selector="wordButtonTapped:" destination="WeF-bd-G26" eventType="touchUpInside" id="7o4-Dp-p0I"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vo7-YE-Ilw">
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vo7-YE-Ilw">
                                 <rect key="frame" x="138" y="132" width="63.333333333333343" height="28"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -117,7 +117,7 @@
                                     <action selector="wordButtonTapped:" destination="WeF-bd-G26" eventType="touchUpInside" id="NfO-KF-usk"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CXd-fN-F2l">
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CXd-fN-F2l">
                                 <rect key="frame" x="212" y="132" width="63.666666666666629" height="28"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -147,7 +147,7 @@
                                     <action selector="searchButtonTapped:" destination="WeF-bd-G26" eventType="touchUpInside" id="ZP2-qZ-Veu"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P3q-HR-zNg">
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P3q-HR-zNg">
                                 <rect key="frame" x="286" y="132" width="69" height="28"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -200,11 +200,11 @@
                         <outlet property="resultLabel" destination="wgw-XN-sqs" id="pmj-fJ-o15"/>
                         <outlet property="searchButton" destination="HFx-Q9-Kfb" id="mfs-9p-S1h"/>
                         <outlet property="wordTextField" destination="g3l-M3-T6C" id="2vu-Wf-vaq"/>
-                        <outletCollection property="wordButtonList" destination="MHS-4L-xVd" collectionClass="NSMutableArray" id="GWK-V6-qFe"/>
-                        <outletCollection property="wordButtonList" destination="7sw-yC-d6F" collectionClass="NSMutableArray" id="KAZ-3P-12m"/>
-                        <outletCollection property="wordButtonList" destination="Vo7-YE-Ilw" collectionClass="NSMutableArray" id="Vgc-Pr-1aM"/>
-                        <outletCollection property="wordButtonList" destination="CXd-fN-F2l" collectionClass="NSMutableArray" id="r9l-t9-mzg"/>
-                        <outletCollection property="wordButtonList" destination="P3q-HR-zNg" collectionClass="NSMutableArray" id="3g6-VT-oSZ"/>
+                        <outletCollection property="wordButton" destination="MHS-4L-xVd" collectionClass="NSMutableArray" id="WJn-cy-AM6"/>
+                        <outletCollection property="wordButton" destination="7sw-yC-d6F" collectionClass="NSMutableArray" id="f6F-tX-VwQ"/>
+                        <outletCollection property="wordButton" destination="Vo7-YE-Ilw" collectionClass="NSMutableArray" id="HkZ-lg-KMN"/>
+                        <outletCollection property="wordButton" destination="CXd-fN-F2l" collectionClass="NSMutableArray" id="U0C-DG-HXn"/>
+                        <outletCollection property="wordButton" destination="P3q-HR-zNg" collectionClass="NSMutableArray" id="Hb3-tm-crx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LPk-4l-50w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
