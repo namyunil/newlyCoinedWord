@@ -19,7 +19,20 @@ class WordViewController: UIViewController {
     @IBOutlet var backgroundImageView: UIImageView!
     
     
-    var newlyWordDictionary = ["오운완" : "오늘 운동완료",
+    enum newlyWordList: String {
+        case 오운완
+        case 스불재
+        case 별다줄
+        case 워라밸
+        case 중꺽마
+        case 맑눈광
+        case 내또출
+        case 억텐
+    }
+    
+    var newlyWord: newlyWordList = .별다줄
+    
+    var newlyWordDictionary = ["오운완" : "오늘 운동 완료",
                                "스불재" : "스스로 불러온 재앙",
                                "별다줄" : "별 걸 다 줄인다",
                                "워라밸" : "워크 라이프 밸런스",
@@ -27,7 +40,7 @@ class WordViewController: UIViewController {
                                "맑눈광" : "맑은 눈의 광인", "내또출" : "내일 또 출근", "억텐" : "억지 텐션"
     ]
     
-    var newlyWordList = ["오운완", "스불재", "별다줄", "워라밸", "중꺽마", "맑눈광", "내또출", "억텐"]
+    var newlyWordArray = ["오운완", "스불재", "별다줄", "워라밸", "중꺽마", "맑눈광", "내또출", "억텐"]
     
     
     
@@ -145,7 +158,7 @@ class WordViewController: UIViewController {
         //3. 텍스트 필드의 텍스트 내용이 결과 레이블에 들어감
         //        textFieldKeyboardTapped(wordTextField)
         //4. 버튼 클릭시 랜덤하게 신조어 대입
-        sender.setTitle(newlyWordList.shuffled()[sender.tag - 1], for: .normal)
+        sender.setTitle(newlyWordArray.shuffled()[sender.tag - 1], for: .normal)
         
     }
     
@@ -173,6 +186,9 @@ class WordViewController: UIViewController {
         //        }
         
         // 소문자만 입력 text?.lowercased()
+        
+        
+        
         switch wordTextField.text?.lowercased() {
         case "별다줄":
             resultLabel.text = "별다줄 뜻은 별거 다 줄인다입니다."
@@ -198,11 +214,24 @@ class WordViewController: UIViewController {
         
         alert()
         
-        for items in newlyWordDictionary.keys {
-            if items == wordTextField.text {
-                resultLabel.text = newlyWordDictionary["\(items)"]
-            }
+        //버튼 클릭 시 텍스트 필드 내용에 따라 결과 레이블의 값이 달라지는 기능
+        
+        
+        if wordTextField.text == newlyWord.rawValue {
+            resultLabel.text = newlyWordDictionary["\(newlyWord.rawValue)"]
+        } else if wordTextField.text != newlyWord.rawValue {
+            resultLabel.text = newlyWordDictionary["\(wordTextField.text!)"]
         }
+        
+        
+    
+//        for items in newlyWordDictionary.keys {
+//            if items == wordTextField.text {
+//                resultLabel.text = newlyWordDictionary["\(items)"]
+//            }
+//        }
+        
+       
         
         
         
